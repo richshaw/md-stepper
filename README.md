@@ -8,11 +8,17 @@ A stepper directive based on the [Material Design Specificationn](https://www.go
 ##Status
 
 * Currently in development
-* CSS is only present for horizontal stepper, vertical stepper is a todo
+* CSS is only present for horizontal stepper
+* Vertical stepper is a todo
+* Mobile stepper is a todo
 
 ##Dependencies 
 
 Requires [Angular](https://github.com/angular/angular) and [Angular Material](https://github.com/angular/material)
+
+## Demo
+
+Demo is available on [Codepen](http://codepen.io/richshaw/pen/dGzorx)
 
 ##Installation
 
@@ -25,10 +31,10 @@ In your index.html file, include the stepper module and style sheet.
 <script type="text/javascript" src="../src/md-stepper/stepper.js"></script>
 ```
 
-Include the mdStepper module as a dependency in your application.
+Include the material.components.stepper module as a dependency in your application.
 
 ```javascript
-angular.module('myApp', ['ngMaterial', 'mdStepper']);
+angular.module('myApp', ['ngMaterial', 'material.components.stepper']);
 ```
 
 ##Usage
