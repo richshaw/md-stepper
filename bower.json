@@ -1,0 +1,26 @@
+{
+  "name": "angular-material-stepper",
+  "authors": [
+    "Richard Shaw <richard.shaw@bnsly.com>"
+  ],
+  "description": "Angular Material Stepper. A stepper directive based on the Material Design Specification. Steppers convey progress through numbered steps. They may also be used for navigation.",
+  "main": [
+    "./src/stepper.js",
+    "./src/stepper.css"
+    ],
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "angular-material",
+    "angular",
+    "stepper"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular-material": "~1.x"
+  }
+}
