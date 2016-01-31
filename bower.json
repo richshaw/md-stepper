@@ -21,6 +21,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular-material": "~1.x"
+    "angular-material": "~1.x",
+    "angular-material-component-theme": "git@github.com:richshaw/md-component-theme.git"
   }
 }

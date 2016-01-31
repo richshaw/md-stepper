@@ -20,7 +20,7 @@ Requires [Angular](https://github.com/angular/angular) and [Angular Material](ht
 
 Demo is available on [Codepen](http://codepen.io/richshaw/pen/dGzorx)
 
-##Installation
+## Installation
 
 In your index.html file, include the stepper module and style sheet.
 
@@ -37,7 +37,7 @@ Include the material.components.stepper module as a dependency in your applicati
 angular.module('myApp', ['ngMaterial', 'material.components.stepper']);
 ```
 
-##Usage
+## Usage
 
 ### Basic markup
 
