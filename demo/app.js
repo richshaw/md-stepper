@@ -1,0 +1,1 @@
+angular.module('demoApp', ['ngMaterial', 'material.components.stepper']);

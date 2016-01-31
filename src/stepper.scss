@@ -1,15 +1,13 @@
 .stepper-horizontal {
 
     md-step {
-        color: rgba(0,0,0,0.26);
         line-height: 32px; 
 
         md-step-circle {
             display: block; 
-            background: rgba(0,0,0,0.12); 
-            width: 32px; 
-            height: 32px; 
-            line-height: 32px; 
+            width: 24px; 
+            height: 24px; 
+            line-height: 24px; 
             border-radius: 16px; 
             position: relative; 
             color: white; 
@@ -26,7 +24,6 @@
 
         .step-optional {
             display: block;
-            color: rgba(0, 0, 0, 0.54);
             font-size: 0.9rem;
             font-weight: normal;
         }
@@ -40,12 +37,8 @@
         }
 
         &.active, &.done {
-
-            color: rgba(0, 0, 0, 0.87);
             font-weight: bold;
-
             md-step-circle {
-                background: #4285f4; 
             }
 
         }

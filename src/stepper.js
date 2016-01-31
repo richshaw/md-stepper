@@ -2,20 +2,25 @@
     'use strict';
 
   angular
-  .module('material.components.stepper',['ngMaterial'])
+  .module('material.components.stepper',['material.core','material.core.theming.componentTheme'])
   .directive('mdStepper', stepperDirective)
   .directive('mdStep', stepDirective)
   .directive('mdStepCircle', stepCircleDirective)
-  .directive('mdStepText', stepTextDirective);
+  .directive('mdStepText', stepTextDirective)
+  .constant("$MD_STEPPER_THEME_CSS", "md-stepper.md-THEME_NAME-theme.md-primary md-step.active md-step-circle,md-stepper.md-THEME_NAME-theme.md-primary md-step.done md-step-circle{color:'{{primary-contrast}}';background-color:'{{primary-color}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.active md-step-circle:not([disabled]) md-icon,md-stepper.md-THEME_NAME-theme.md-primary md-step.done md-step-circle:not([disabled]) md-icon{color:'{{primary-contrast}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.active md-step-circle:not([disabled]):hover,md-stepper.md-THEME_NAME-theme.md-primary md-step.done md-step-circle:not([disabled]):hover{background-color:'{{primary-color}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.active md-step-circle:not([disabled]).md-focused,md-stepper.md-THEME_NAME-theme.md-primary md-step.done md-step-circle:not([disabled]).md-focused{background-color:'{{primary-600}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-warn md-step-circle{color:'{{warn-contrast}}';background-color:'{{warn-color}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-warn md-step-circle:not([disabled]) md-icon{color:'{{warn-contrast}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-warn md-step-circle:not([disabled]):hover{background-color:'{{warn-color}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-warn md-step-circle:not([disabled]).md-focused{background-color:'{{warn-700}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-accent md-step-circle{color:'{{accent-contrast}}';background-color:'{{accent-color}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-accent md-step-circle:not([disabled]) md-icon{color:'{{accent-contrast}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-accent md-step-circle:not([disabled]):hover{background-color:'{{accent-color}}'}md-stepper.md-THEME_NAME-theme.md-primary md-step.md-accent md-step-circle:not([disabled]).md-focused{background-color:'{{accent-700}}'}");
 
-  stepperDirective.$inject = [];
 
-  function stepperDirective() {
+  stepperDirective.$inject = ['$injector','$mdComponentTheme'];
+
+  function stepperDirective($injector,$mdComponentTheme) {
+
+    var themeCss = $injector.get('$MD_STEPPER_THEME_CSS');
+    $mdComponentTheme.generateTheme(themeCss);
 
     /**
     Vertical
     <div class="stepper">
-      <div class="step step-active">
+      <div class="step done">
         <div>
           <div class="circle">n</div>
           <div class="line"></div>
@@ -28,7 +33,7 @@
     </div>
     Horizontal
     <div class="stepper">
-      <div class="step">
+      <div class="step active">
         <div>
           <div class="circle">n</div>
         </div>
@@ -42,8 +47,6 @@
       </div>
     </div>
     */
-
-
     return {
       restrict:'E',
       scope: {

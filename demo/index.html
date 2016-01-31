@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>This is my demo</title>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+        <script src="../src/componentTheming.js"></script>
+        <script src="../src/stepper.js"></script>
+
+        <script src="./app.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <link rel="stylesheet" type="text/css" href="../src/stepper.css">
+
+        <style type="text/css">
+            body {
+                padding:5%
+            }
+            md-stepper md-icon {
+                color:#fff
+            }
+        </style>
+    </head>
+
+  <body ng-app="demoApp">
+        <md-stepper class="md-primary" md-direction="horizontal">
+          <md-step class="done">
+              <md-step-circle>
+                  <md-icon md-font-set="material-icons">done</md-icon>
+              </md-step-circle>
+              <md-step-text>Create experiment</md-step-text>
+          </md-step>
+          <md-step class="done">
+              <md-step-circle>
+                  <md-icon md-font-set="material-icons">done</md-icon>
+              </md-step-circle>
+              <md-step-text>Experiment settings</md-step-text>
+          </md-step>
+          <md-step class="active">
+              <md-step-circle>3</md-step-circle>
+              <md-step-text>Add ideas</md-step-text>
+          </md-step>
+          <md-step>
+              <md-step-circle>4</md-step-circle>
+              <md-step-text>Launch</md-step-text>
+          </md-step>
+        </md-stepper> 
+  </body>
+</html>
