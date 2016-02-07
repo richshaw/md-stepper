@@ -1,4 +1,18 @@
 md-stepper.md-THEME_NAME-theme {
+    md-step {
+      md-step-circle {
+        background-color:'{{background-500}}';
+      }
+    }
+
+    &.stepper-horizontal {
+      md-step {
+        md-step-line{
+          border-top-color:'{{background-400}}';
+        }
+      }
+    }
+
     &.md-primary {
       md-step {
         &.active, &.done {

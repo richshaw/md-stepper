@@ -1,7 +1,7 @@
 .stepper-horizontal {
 
     md-step {
-        line-height: 32px; 
+        line-height: 24px; 
 
         md-step-circle {
             display: block; 
@@ -11,11 +11,20 @@
             border-radius: 16px; 
             position: relative; 
             color: white; 
-            text-align: center
+            text-align: center;
+            font-size: 12px;
+
+            md-icon {
+                font-size: 12px;
+                height: 12px;
+                line-height: inherit;
+            }
         }
 
         md-step-text { 
             margin-left:8px;
+            font-size: 14px;
+            color: rgba(0,0,0,0.26);
             
             &.optional {
                 line-height: 16px;
@@ -29,15 +38,17 @@
         }
 
         md-step-line {
-            border-top: 2px solid #ccc;
+            border-top: 1px solid;
             display: block;
             height: 2px;
-            margin:16px 8px 0px 8px;
+            margin:12px 8px 0px 8px;
             min-width: 30px;
         }
 
         &.active, &.done {
-            font-weight: bold;
+            md-step-text { 
+                color: rgba(0,0,0,0.87);
+            }
             md-step-circle {
             }
 
