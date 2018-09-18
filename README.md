@@ -72,10 +72,10 @@ angular.module('myApp', ['ngMaterial', 'material.components.stepper']);
 </md-stepper>
 ```
 
-###Parameters
+### Parameters
 
 * md-direction = horizontal (vertical layout hasn't been implemented yet)
 
-##License
+## License
 
 This software is provided free of charge and without restriction under the MIT License.
