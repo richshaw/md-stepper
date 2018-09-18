@@ -1,18 +1,18 @@
-#Angular Material Stepper
+# Angular Material Stepper
 
-##Description
+## Description
 
 A stepper directive based on the [Material Design Specificationn](https://www.google.com/design/spec/components/steppers.html).
 
 
-##Status
+## Status
 
 * Currently in development
 * CSS is only present for horizontal stepper
 * Vertical stepper is a todo
 * Mobile stepper is a todo
 
-##Dependencies 
+## Dependencies 
 
 Requires [Angular](https://github.com/angular/angular) and [Angular Material](https://github.com/angular/material)
 
